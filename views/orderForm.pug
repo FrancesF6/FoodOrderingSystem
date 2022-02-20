@@ -1,0 +1,35 @@
+//- required data:
+    restaurantList = [{_id: xx, name: xx}, ...]
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Order Form | Food Ordering System
+        link(rel="stylesheet" href=`/css/orderForm.css`)
+        link(rel="icon" href=`/images/icon-order.png`)
+
+    body
+
+        include ./partials/header
+
+        #dropdown
+            select(id="restaurant_list")
+                option(value="placeholder" disabled=true selected=true hidden=true) Select a restaurant ...
+                each restaurant in restaurantList
+                    option(value=`${restaurant._id}`) #{restaurant.name}
+
+        #bodypart
+            #restaurant_info
+                #rName
+                #info-container
+                    #info-left-container
+                    #info-middle-container
+                    #info-right-container
+
+            .container
+                #the_category(class="column lSide")
+                #the_menu(class="column center")
+                #order_summary(class="column rSide")
+
+            
+        script(src=`/js/orderForm.js`)

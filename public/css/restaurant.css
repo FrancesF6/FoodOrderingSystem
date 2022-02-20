@@ -1,0 +1,153 @@
+.container {
+    display: flex;
+}
+
+.column {
+    height: max-content;
+    background-color: rgba(255,255,240,0.25);
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    color: rgb(200, 50, 50);
+}
+
+.lSide {
+    width: 40%;
+    text-align: center;
+    border-radius: 20px;
+    position: fixed;
+    border: dashed rgba(200, 50, 50,0.75);
+}
+
+.rSide {
+    width: 57%;
+    position: relative;
+    left: 40.6%;
+    padding: 0px 0px 25px 20px;
+    border-radius: 20px;
+    border: dashed rgba(200, 50, 50,0.75);
+}
+
+#restaurant-id, #menu-title {
+    margin-top: 30px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: large;
+    color: rgb(150, 30, 30);
+    text-align: center;
+}
+
+.rate-star {
+    height: 20px;
+    vertical-align: text-top;
+    padding-bottom: 20px;
+}
+
+#visibility-label {
+    margin-bottom: 10px;
+}
+
+.visible-radios {
+    margin: 5px;
+    width: 25px;
+}
+
+.category {
+    color: rgb(180, 35, 35);
+    margin-top: 20px;
+    font-family: 'Garamond', serif;
+    font-size: larger;
+}
+
+.dishes {
+    margin-left: 25px;
+}
+
+.dish {
+    color: rgb(200, 50, 50);
+    font-weight: normal;
+    font-family: 'Garamond', serif;
+    font-size: large;
+    padding: 10px 0px 10px 0px;
+}
+
+.addremove-pic {
+    height: 20px;
+    cursor: pointer;
+    vertical-align: text-top;
+}
+
+#name, .category-input, .dish-name-input {
+    border-radius: 5px;
+    margin: 5px;
+    width: 200px;
+    border: 1px solid coral;
+    text-align: center;
+}
+
+#min_order, #delivery_fee, .dish-price-input {
+    border-radius: 5px;
+    margin: 5px;
+    width: 75px;
+    border: 1px solid coral;
+    text-align: center;
+}
+
+.dish-description-input {
+    width: 85%;
+    text-align: left;
+    padding-left: 5px;
+    margin: 5px;
+    border: 1px solid coral;
+    border-radius: 5px;
+}
+
+#menu-save-div {
+    text-align: center;
+}
+
+#info-save, #menu-save {
+    background-color: rgba(250,100,50,0.75);
+    border-radius: 10px;
+    border: none;
+    color: ivory;
+    padding: 5px 10px;
+    margin: 20px 0px 10px 0px;
+    cursor: pointer;
+    width: 120px;
+}
+
+#menu-save {
+    margin-top: 0px;
+}
+
+#info-save:hover, #menu-save:hover {
+    background-color: rgba(250,100,50,0.95);
+    box-shadow: 0 0 5px coral;
+}
+
+#info-save:active, #menu-save:active {
+    transform: translate(0.5px, 1px);
+}
+
+#change-menu-alert {
+    font-weight: normal;
+    font-size: large;
+}
+
+#category-add {
+    background-color: rgb(255,248,240);
+    border: 1px solid rgb(179,98,0);
+    border-radius: 5px;
+    color: rgb(179,98,0);
+    padding: 5px 5px;
+    width: 100px;
+    cursor: pointer;
+}
+
+#category-add:hover {
+    background-color: rgba(255,248,240,0.85);
+    box-shadow: 0 0 5px coral;
+}
+
+#category-add:active {
+    transform: translate(0.5px, 1px);
+}

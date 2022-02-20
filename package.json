@@ -1,0 +1,21 @@
+{
+  "name": "food-ordering-system",
+  "version": "1.0.0",
+  "description": "Modified project of school course \"Fundamental of Web Applications\"",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js -e js,mjs,json,pug",
+    "test": "SET FOSdatabaseUsr=<username>&&SET FOSdatabasePsw=<password>&&nodemon server.js -e js,mjs,json,pug"
+  },
+  "author": "Frances Fang",
+  "license": "ISC",
+  "dependencies": {
+    "connect-mongodb-session": "^3.1.1",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.2.2",
+    "nodemon": "^2.0.15",
+    "pug": "^3.0.2"
+  }
+}

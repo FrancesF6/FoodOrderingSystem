@@ -1,0 +1,19 @@
+//- Require data:
+    users - [ {_id, username, numberOfOrders}, ...]
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Users | Food Ordering System
+        link(rel="stylesheet" type="text/css" href=`/css/users.css`)
+        link(rel="icon" href=`/images/icon-users.png`)
+
+    body
+        include ./partials/header
+
+        #list
+            each user in users
+                a.user-link(href=`/users/${user._id}`)
+                    img.user-avatar(src=`/images/icon-user.png`)
+                    p.user-name #{user.username}
+                    p.number-orders #orders: #{user.numberOfOrders}

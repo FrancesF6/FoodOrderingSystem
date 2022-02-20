@@ -1,0 +1,45 @@
+//- require data:
+    restaurantname: name of the restaurant
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title #{restaurantname} | Food Ordering System
+        link(rel="stylesheet" type="text/css" href=`/css/restaurant.css`)
+        link(rel="icon" href=`/images/icon-restaurant.png`)
+
+    body(onload="init()")
+        include ./partials/header
+
+        .container
+            #restaurant-info(class="column lSide")
+                p#restaurant-id Restaurant ID:
+                #restaurant-rate
+                form#restaurant-info-form
+                    label(for="name") Name: 
+                    input.restaurant-info-inputs(type="text" id="name" name="Restaurant Name")
+                    br
+                    label(for="min_order") Min Order: 
+                    input.restaurant-info-inputs(type="text" id="min_order" name="Min Order")
+                    br
+                    label(for="delivery_fee") Delivery Fee: 
+                    input.restaurant-info-inputs(type="text" id="delivery_fee" name="Delivery Fee")
+                    br
+                    p#visibility-label Visibility: 
+                    input.visible-radios(type="radio" id="visible" name="visibility" value="true")
+                    label(for="visible") On
+                    br
+                    input.visible-radios(type="radio" id="invisible" name="visibility" value="false")
+                    label(for="invisible") Off
+                    br
+                    input(type="button" id="info-save" value="Save Changes" onclick="saveRestaurantInfoChanges()")
+
+            #menu(class="column rSide")
+                p#menu-title Menu
+                #menu-save-div
+                    input(type="button" id="menu-save" value="Save Menu" onclick="saveRestaurantMenuChanges()")
+                p#change-menu-alert Please note that changes to restaurant menu information may result in changes to restaurant sales statistics.
+                input(type="button" id="category-add" value="Add Category" onclick="addCategory()")
+                #menu-content
+            
+        script(src=`/js/restaurant.js`)

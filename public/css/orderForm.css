@@ -1,0 +1,141 @@
+#dropdown {
+    padding: 5px 10px 10px 10px;
+}
+
+#restaurant_list {
+    border-radius: 10px;
+    font-family: 'Georgia', serif;
+    font-size: medium;
+    color: rgb(180, 35, 35);
+    border: 1px solid rgb(180, 35, 35);
+}
+
+#bodypart {
+    display: none;
+    height: max-content;
+    width: 100%;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    /* image from: http://www.freepik.com Designed by Bimbimkha / Freepik */
+    background-image: url("../images/order-bg.jpg");
+    background-size: 100%;
+}
+
+#restaurant_info {
+    background-color:rgba(255,245,240,0.875);
+    padding: 20px;
+    font-size: medium;
+    border-radius: 20px;
+    border-style: double;
+    border-width: 5px;
+    border-color: chocolate;
+}
+
+#rName {
+    text-align: center;
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgba(165,42,42,0.9);
+}
+
+#info-container {
+    display: flex;
+}
+
+#info-left-container, #info-right-container {
+    width: 40%;
+}
+
+#info-middle-container {
+    width: 20%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.rate-star {
+    height: 20px;
+    vertical-align: text-top;
+}
+
+.container {
+    display: flex;
+    background-color:rgba(255,245,240,0.9);
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.lSide {
+    width: 20%;
+    text-align: center;
+    border-radius: 20px;
+    border-style: none none double double;
+    border-width: 5px;
+    border-color: chocolate;
+}
+
+.center {
+    width: 60%;
+    border-radius: 20px;
+    padding: 0px 20px 0px 30px;
+    border-style: none dotted double;
+    border-width: 4.5px;
+    border-bottom-width: 5px;
+    border-color: chocolate;
+}
+
+.rSide {
+    width: 20%;
+    padding: 0px 15px 0px 15px;
+    border-radius: 20px;
+    border-style: none double double none;
+    border-width: 5px;
+    border-color: chocolate;
+}
+
+.category-link {
+    color: rgb(200, 50, 50);
+    text-decoration: none;
+}
+
+.category-link:hover {
+    color: rgb(180, 35, 35);
+    text-shadow: 0 0 5px coral;
+}
+
+.category {
+    margin-bottom: 35px;
+}
+
+.add-remove-pic {
+    height: 20px;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+
+#submit-area {
+    text-align: center;
+}
+
+#submit-button {
+    background-color: rgba(250,100,50,0.75);
+    border-radius: 10px;
+    border: none;
+    color: ivory;
+    padding: 5px;
+    margin: 10px 0px 10px 0px;
+    cursor: pointer;
+    width: 200px;
+}
+
+#submit-button:hover {
+    background-color: rgba(250,100,50,0.95);
+    box-shadow: 0 0 5px coral;
+}
+
+#submit-button:active {
+    transform: translate(0.5px, 1px);
+}

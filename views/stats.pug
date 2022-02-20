@@ -1,0 +1,44 @@
+//- Require data:
+    stats = {
+        restaurant_id: {
+            name: String,
+            numberOfOrders: Number,
+            avgOrder: Number / NaN,
+            popularDishes: [[dish, quantity], ...]
+        }, ...
+    }
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Stats | Food Ordering System
+        link(rel="stylesheet" href=`/css/stats.css`)
+        link(rel="icon" href=`/images/icon-stats.png`)
+
+    body
+        include ./partials/header
+
+        h1#stats-title Restaurant Sales Summary
+        br
+
+        table#stats-table
+            tr.rows
+                th.heads Restaurant Name
+                th.heads Number of Orders 
+                th.heads Average Order Total 
+                th.heads Most Popular Items
+            each restaurantStats, restaurant_id in stats 
+                tr.rows 
+                    td.columns #{restaurantStats.name}
+                    td.columns #{restaurantStats.numberOfOrders}
+                    if isNaN(restaurantStats.avgOrder)
+                        td.columns N/A
+                    else
+                        td.columns #{restaurantStats.avgOrder}
+                    if restaurantStats.popularDishes.length == 0
+                        td.columns N/A
+                    else
+                        td.columns 
+                            each dish in restaurantStats.popularDishes 
+                                | #{dish[0]}
+                                br

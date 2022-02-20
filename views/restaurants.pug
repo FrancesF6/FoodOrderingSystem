@@ -1,0 +1,28 @@
+//- Require data:
+    restaurants - [{_id: ObjectId, name: String, avgRate: Number}, ...]
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Restaurants | Food Ordering System
+        link(rel="stylesheet" type="text/css" href=`/css/restaurants.css`)
+        link(rel="icon" href=`/images/icon-restaurant.png`)
+
+    body
+        include ./partials/header
+
+        #list
+            each restaurant in restaurants
+                a.link(href=`/restaurants/${restaurant._id}`)
+                    img.logo(src=`/images/restaurant.png`)
+                    p.name #{restaurant.name}
+                    .restaurant_rate
+                        if (restaurant.avgRate)
+                            - let star = restaurant.avgRate;
+                            while (star >= 0.5)
+                                if (star >= 1)
+                                    img.rate-star(src=`/images/star.png`)
+                                    - star --
+                                    - continue
+                                img.rate-star(src=`/images/star-half.png`)
+                                - star -= 0.5

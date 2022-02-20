@@ -1,0 +1,57 @@
+//- Require data:
+    order - {
+        _id: ObjectId,
+        userID: {_id, username, privacy},
+        restaurantID: {_id, name},
+        subtotal: 31.5,
+        total: 39.65,
+        fee: 5,
+        tax: 3.15,
+        order: { "Sauron's Lava Soup": 2, "Eowyn's (In)Famous Stew": 4, ... },
+        rate: 5 or 0 (not set)
+    }
+    owner - true/false - if the order page belongs to the user logged in
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Order | Food Ordering System
+        link(rel="stylesheet" type="text/css" href=`/css/order.css`)
+        link(rel="icon" href=`/images/icon-orders.png`)
+
+    body
+        include ./partials/header
+
+        #order-content
+            p#orderID Order ##{order._id}
+            
+            #username
+                | Username: 
+                a#username-link(href=`/users/${order.userID._id}`) #{order.userID.username}
+            #restaurant-name Restaurant Name: #{order.restaurantID.name}
+            #rate
+                | Rate: 
+                - let star = 0;
+                if (order.rate)
+                    //- already set rate
+                    while star < order.rate
+                        img.rate-star(src=`/images/star.png`)
+                        - star++
+                else if (owner)
+                    //- not set rate && owner logged in, can set rate
+                    while star < 5
+                        img.set-rate-star(src=`/images/star.png` id=`set-rate-star-${star+1}` onmouseover="hoverStar(this)" onmouseout="outHoverStar()" onclick="setRate(this)" )
+                        - star++
+
+            #order-items
+                p#order-items-label Order Contents:
+                each quantity, dish in order.order
+                    p#order-item #{dish} * #{quantity}
+
+            #order-summary
+                p Subtotal:  #{order.subtotal.toFixed(2)}
+                p Tax:  #{order.tax.toFixed(2)}
+                p Delivery Fee:  #{order.fee.toFixed(2)}
+                p Total:  #{order.total.toFixed(2)}
+
+        script(src=`/js/order.js`)

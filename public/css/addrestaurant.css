@@ -1,0 +1,49 @@
+#add-form {
+    padding: 25px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    margin: 30px 0px 0px -15em;
+    background-color: rgba(255,255,240,0.25);
+    border: dashed rgba(200, 50, 50,0.75);
+    border-radius: 20px;
+}
+
+#add-form .labels {
+    font-family: 'Georgia', serif;
+    font-size: large;
+    margin: 10px;
+    color: rgb(200, 50, 50);
+}
+
+#add-form .add-form-inputs {
+    border-radius: 5px;
+    margin: 10px;
+    width: 100px;
+    border: 1px solid coral;
+    text-align: center;
+}
+
+.add-form-inputs#name {
+    width: 200px;
+}
+
+#button {
+    margin-top: 20px;
+    background-color: rgba(250,100,50,0.75);
+    border-radius: 10px;
+    border: none;
+    color: ivory;
+    padding: 7px 15px;
+    font-size: medium;
+    cursor: pointer;
+}
+
+#button:hover {
+    background-color: rgba(250,100,50,0.95);
+    box-shadow: 0 0 5px coral;
+}
+
+#button:active {
+    transform: translate(0.5px, 1px);
+}

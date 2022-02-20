@@ -1,0 +1,102 @@
+body {
+    /* image from: https://pngtree.com/freebackground/watercolor-background-with-coral-and-peach-stains_1223419.html */
+    background-image: url("../../images/main-bg.png");
+}
+
+#header {
+    display: flex;
+    flex-flow: row wrap;
+    width: calc(100% - 200px);
+    margin: 10px;
+    margin-bottom: 15px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.header-page {
+    margin: 15px;
+    font-size: larger;
+    color: coral;
+    text-shadow: 1px 1px 2px ivory, 0 0 30px orange, 0 0 5px ivory;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header-page:hover {
+    color: rgb(180, 35, 35);
+    text-shadow: 0 0 5px coral;
+}
+
+#header-date {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    margin: 15px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: large;
+    color: brown;
+}
+
+#header-popup-login-box {
+    display: none;   /* initially invisible */
+    position: absolute;
+    left: 8em;
+    width: 20em;
+    text-align: center;
+}
+
+#header-login-form {
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    background-color: rgb(255,250,240);
+    border: dashed rgba(200, 50, 50,0.75);
+    border-radius: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+.header-login-labels {
+    font-family: 'Georgia', serif;
+    font-size: large;
+    margin: 10px;
+    color: rgb(200, 50, 50);
+}
+
+#header-login-username, #header-login-password {
+    border-radius: 5px;
+    margin: 10px;
+    width: 100px;
+    border: 1px solid coral;
+    text-align: center; 
+}
+
+#header-login, #header-cancel {
+    margin-top: 15px;
+    border-radius: 7px;
+    border: none;
+    color: ivory;
+    padding: 4px 8px;
+    text-align: center;
+    font-size: medium;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#header-login {
+    background-color: rgba(250,100,50,0.75);
+}
+
+#header-login:hover {
+    background-color: rgba(250,100,50,0.95);
+    box-shadow: 0 0 5px coral;
+}
+
+#header-cancel:hover {
+    background-color: rgba(250,100,50,0.5);
+}
+
+#header-login:active {
+    background-color: rgba(250,100,50,0.95);
+    transform: translate(0.5px, 1px);
+}

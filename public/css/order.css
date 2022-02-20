@@ -1,0 +1,57 @@
+#order-content {
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
+
+#orderID {
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 1.5em;
+    color: rgb(200, 50, 50);
+}
+
+#order-items-label {
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(200, 50, 50);
+}
+
+#username, #restaurant-name, #rate {
+    color: rgb(200, 50, 50);
+    font-size: large;
+    padding: 10px;
+}
+
+#username-link {
+    color: sandybrown;
+    text-decoration: none;
+}
+
+#username-link:hover {
+    color: coral;
+}
+
+#order-items {
+    padding: 20px;
+}
+
+#order-item {
+    color: rgb(200, 50, 50);
+    font-family: 'Garamond', serif;
+    font-size: large;
+}
+
+#order-summary {
+    font-size: large;
+    color: rgb(150, 30, 30);
+}
+
+.rate-star, .set-rate-star {
+    height: 20px;
+    vertical-align: text-top;
+}
+
+.set-rate-star {
+    cursor: pointer;
+    opacity: 0.5;
+}

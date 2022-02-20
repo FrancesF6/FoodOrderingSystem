@@ -1,0 +1,117 @@
+.container {
+    display: flex;
+}
+
+.column {
+    height: max-content;
+    background-color: rgba(255,255,240,0.25);
+    font-family: 'Georgia', serif;
+    color: rgb(200, 50, 50);
+    text-align: center;
+}
+
+.lSide {
+    position: fixed;
+    width: 20%;
+    left: 5%;
+    padding: 20px 0px 10px 0px;
+    border-radius: 20px;
+    border: dashed rgba(200, 50, 50,0.75);
+}
+
+.rSide {
+    position: relative;
+    width: 40%;
+    left: 30%;
+    padding-bottom: 25px;
+    border-radius: 20px;
+    border: dashed rgba(200, 50, 50,0.75);
+}
+
+#profile {
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 1em;
+    font-size: 1.75em;
+    font-weight: bold;
+}
+
+#profile-username {
+    font-family: 'Comic Sans MS', sans-serif;
+    display: inline;
+}
+
+#private-mode {
+    padding-bottom: 20px;
+    font-family: 'Georgia', serif;
+    font-size: large;
+    color: rgb(150, 30, 30);
+}
+
+.private-labels {
+    font-family: 'Georgia', serif;
+    font-size: large;
+    margin: 10px;
+    color: rgb(150, 30, 30);
+}
+
+.private-radios {
+    margin: 6px;
+    width: 20px;
+}
+
+#change-psw {
+    margin-top: 20px;
+    font-size: large;
+    border-top: dotted rgba(200, 50, 50,0.75);
+    padding: 20px 0px 10px 0px;
+}
+
+.change-psw-input {
+    border-radius: 5px;
+    margin: 10px;
+    border: 1px solid coral;
+    text-align: center;
+}
+
+#privacy-button, #changePsw-button {
+    background-color: rgba(250,100,50,0.75);
+    border-radius: 10px;
+    border: none;
+    color: ivory;
+    padding: 5px 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#privacy-button:hover, #changePsw-button:hover {
+    background-color: rgba(250,100,50,0.95);
+    box-shadow: 0 0 5px coral;
+}
+
+#privacy-button:active, #changePsw-button:active {
+    transform: translate(0.5px, 1px);
+}
+
+#order-history-label {
+    font-family: 'Trebuchet MS', sans-serif;
+    padding-top: 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: rgb(200, 50, 50);
+}
+
+.order {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    margin: 15px;
+}
+
+#order-link {
+    color: rgb(200, 50, 50);
+    text-decoration: none;
+}
+
+#order-link:hover {
+    color: rgb(180, 35, 35);
+    text-shadow: 0 0 5px coral;
+}

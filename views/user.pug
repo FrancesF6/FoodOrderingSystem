@@ -1,0 +1,44 @@
+//- Require data:
+    user - {_id: MongoDB ObjectID, username, privacy: boolean, orderHistory: []}
+    owner - true/false - if the profile page belongs to the user logged in
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title #{user.username}'s profile | Food Ordering System
+        link(rel="stylesheet" type="text/css" href=`/css/user.css`)
+        link(rel="icon" href=`/images/icon-user.png`)
+
+    body
+        include ./partials/header
+
+        .container
+            if owner
+                div(class="column lSide")
+                    #private-mode Private Mode:
+                    form#private-form
+                        input.private-radios(type="radio" id="on" name="privacy" checked=user.privacy)
+                        label.private-labels(for="on") On
+                        br
+                        input.private-radios(type="radio" id="off" name="privacy" checked=!user.privacy)
+                        label.private-labels(for="off") Off
+                        br
+                        input(type="button" id="privacy-button" value="Save" onclick="savePrivacy()")
+                    
+                    #change-psw Change Password:
+                    form
+                        input.change-psw-input(type="password" id="psw" required maxlength="20")
+                        br
+                        input(type="button" id="changePsw-button" value="Change" onclick="changePassword()")
+
+            div(class="column rSide")
+                #profile Profile of 
+                    #profile-username #{user.username}
+
+                p#order-history-label Order History
+                #order-history
+                    each order in user.orderHistory
+                        .order
+                            a#order-link(href=`/order/${order._id}`) #{order._id}
+        
+        script(src=`/js/user.js`)

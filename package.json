@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js -e js,mjs,json,pug",
-    "test": "SET FOSdatabaseUsr=darker_96&&SET FOSdatabasePsw=v4XT6KVW4QWbEItd&&nodemon server.js -e js,mjs,json,pug"
+    "test": "SET FOSdatabaseUsr=<username>&&SET FOSdatabasePsw=<password>&&nodemon server.js -e js,mjs,json,pug"
   },
   "author": "Frances Fang",
   "license": "ISC",

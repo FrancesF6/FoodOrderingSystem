@@ -1,3 +1,5 @@
+const port = process.env.PORT || 3000;
+
 const express = require('express');
 const session = require('express-session');
 const mongoose = require('mongoose');
@@ -49,7 +51,6 @@ app.use((req, res, next) => {
 
 //**********************************************************************//
 // server routes
-app.use(exposeDBURI);
 app.use(exposeSession);
 
 app.use("/users", require("./routers/user-router"));   // user router
@@ -64,12 +65,6 @@ app.get('/logout', checkAuth, logout);
 //**********************************************************************//
 // FUNCTIONS
 
-// store dbURI to res.locals so routers can access
-function exposeDBURI(req, res, next) {
-    res.locals.dbURI = dbURI;
-    next();
-}
-
 // store session data to res.locals so template engine can access
 function exposeSession(req, res, next) {
     if (req.session) res.locals.session = req.session;
@@ -77,7 +72,7 @@ function exposeSession(req, res, next) {
 }
 
 function logout(req, res) {
-    req.session.destroy();
+    req.session.destroy((err) => {});
     delete res.locals.session;
     res.status(200).redirect('/');
 }
@@ -120,8 +115,9 @@ db.once('open', function() {
     Restaurants.init(() => {
         Users.init(() => {
             Orders.init(() => {
-                app.listen(process.env.PORT || 3000);
-                console.log(`Server listening at port ${process.env.PORT || 3000}.`);
+                app.listen(port, () => {
+                    console.log(`Server listening at port ${port}.`);
+                });
             });
         });
     });

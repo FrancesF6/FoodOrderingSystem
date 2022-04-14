@@ -6,9 +6,8 @@ body {
 #header {
     display: flex;
     flex-flow: row wrap;
-    width: calc(100% - 200px);
-    margin: 10px;
-    margin-bottom: 15px;
+    width: 75%;
+    margin: 10px 0px 15px;
     font-family: 'Trebuchet MS', sans-serif;
 }
 

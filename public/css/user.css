@@ -1,5 +1,7 @@
 .container {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 .column {
@@ -12,7 +14,7 @@
 
 .lSide {
     position: fixed;
-    width: 20%;
+    width: max(200px, 20%);
     left: 5%;
     padding: 20px 0px 10px 0px;
     border-radius: 20px;
@@ -21,8 +23,8 @@
 
 .rSide {
     position: relative;
-    width: 40%;
-    left: 30%;
+    width: max(400px, 40%);
+    left: min(40%, 500px);
     padding-bottom: 25px;
     border-radius: 20px;
     border: dashed rgba(200, 50, 50,0.75);

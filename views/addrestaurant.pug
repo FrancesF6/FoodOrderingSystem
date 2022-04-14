@@ -8,16 +8,17 @@ html(lang="en")
     body
         include ./partials/header
 
-        form#add-form
-            label.labels(for="name") Restaurant Name:
-            input.add-form-inputs(type="text" id="name" name="Restaurant Name")
-            br
-            label.labels(for="min_order") Minimum Order:
-            input.add-form-inputs(type="text" id="min_order" name="Minimum Order")
-            br
-            label.labels(for="delivery_fee") Delivery Fee:
-            input.add-form-inputs(type="text" id="delivery_fee" name="Delivery Fee")
-            br
-            input(type="button" id="button" value="Submit" onclick="addRestaurant()")
+        .container
+            form#add-form
+                label.labels(for="name") Restaurant Name:
+                input.add-form-inputs(type="text" id="name" name="Restaurant Name")
+                br
+                label.labels(for="min_order") Minimum Order:
+                input.add-form-inputs(type="text" id="min_order" name="Minimum Order")
+                br
+                label.labels(for="delivery_fee") Delivery Fee:
+                input.add-form-inputs(type="text" id="delivery_fee" name="Delivery Fee")
+                br
+                input(type="button" id="button" value="Submit" onclick="addRestaurant()")
 
         script(src=`/js/addrestaurant.js`)
